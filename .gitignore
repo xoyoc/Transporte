@@ -20,4 +20,23 @@
 .claude/
 CLAUDE.md
 
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+*.log
+
 # End of https://www.toptal.com/developers/gitignore/api/linux

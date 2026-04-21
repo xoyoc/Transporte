@@ -95,14 +95,44 @@
     </script>
 
     <title>Loginco Transporte | Carga Contenerizada FCL y LCL en Lázaro Cárdenas, Michoacán</title>
-    <link rel="icon" type="image/png" href="img/Isotipo.png">
+    <!-- Preconexiones para recursos externos críticos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+
+    <!-- Preload de imagen LCP (hero) -->
+    <link rel="preload" as="image" fetchpriority="high"
+          href="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&q=75&w=900"
+          media="(max-width: 768px)">
+    <link rel="preload" as="image" fetchpriority="high"
+          href="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&q=75&w=1920"
+          media="(min-width: 769px)">
+
+    <!-- Google Fonts: carga no bloqueante -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+          media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap">
+    </noscript>
+
+    <!-- Favicon SVG (ligero) -->
+    <link rel="icon" type="image/svg+xml" href="img/Isotipo.svg">
+    <link rel="icon" type="image/png" href="img/Isotipo.png" sizes="96x96">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Font Awesome: carga no bloqueante -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+
     <style>
-        /* ========================================
-           IMPORTACION DE FUENTES
-           ======================================== */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
         /* ========================================
            TOKENS DE DISEÑO — SISTEMA DE COLORES
@@ -160,12 +190,18 @@
                 rgba(0, 1, 141, 0.90),
                 rgba(56, 57, 188, 0.78)
             ),
-            url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070') center/cover no-repeat;
+            url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&q=75&w=1920') center/cover no-repeat;
             min-height: 92vh;
         }
 
         @media (max-width: 768px) {
             .hero-bg {
+                background-image: linear-gradient(
+                    135deg,
+                    rgba(0, 1, 141, 0.90),
+                    rgba(56, 57, 188, 0.78)
+                ),
+                url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&q=75&w=900');
                 min-height: 100svh;
             }
         }
@@ -494,7 +530,7 @@
 
                 <!-- Logo -->
                 <a href="#inicio" class="logo flex items-center" aria-label="Loginco — Ir al inicio">
-                    <img src="img/Logotipo.png" alt="Loginco" class="h-11 w-auto">
+                    <img src="img/Logotipo.png" alt="Loginco" class="h-11 w-auto" width="180" height="44" fetchpriority="high">
                 </a>
 
                 <!-- Menu Desktop -->
@@ -1306,7 +1342,7 @@
                 <!-- Logo y slogan -->
                 <div>
                     <div class="logo mb-5">
-                        <img src="img/LogotipoFooter.png" alt="Loginco" class="h-16 w-auto">
+                        <img src="img/LogotipoFooter.png" alt="Loginco" class="h-16 w-auto" width="200" height="64" loading="lazy">
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-5">
                         Logística Internacional &amp; Servicios en Comercio Exterior, S.C.
