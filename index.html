@@ -517,6 +517,7 @@
             max-height: 24rem;
             opacity: 1;
         }
+        .contact-email::before { content: attr(data-u) "\40" attr(data-d); }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -1301,7 +1302,7 @@
                         </div>
                     </a>
 
-                    <a href="mailto:info@loginco.com.mx"
+                    <a href="https://www.loginco.com.mx/contacto/"
                        class="flex items-center gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors group">
                         <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
                              style="background: rgba(8,184,181,0.12);" aria-hidden="true">
@@ -1309,7 +1310,7 @@
                         </div>
                         <div>
                             <p class="text-xs text-gray-500 font-medium">Correo</p>
-                            <p class="font-bold text-gray-800 text-sm group-hover:text-[#00018d] transition-colors">info@loginco.com.mx</p>
+                            <p class="font-bold text-gray-800 text-sm group-hover:text-[#00018d] transition-colors"><span class="contact-email" data-u="info" data-d="loginco.com.mx"></span></p>
                         </div>
                     </a>
 
@@ -1356,7 +1357,7 @@
                            aria-label="WhatsApp de Loginco">
                             <i class="fab fa-whatsapp text-white text-base" aria-hidden="true"></i>
                         </a>
-                        <a href="mailto:info@loginco.com.mx"
+                        <a href="https://www.loginco.com.mx/contacto/"
                            class="w-9 h-9 rounded-lg flex items-center justify-center hover:bg-[#08b8b5] transition-colors"
                            style="background: rgba(255,255,255,0.08);"
                            aria-label="Correo de Loginco">
@@ -1407,7 +1408,7 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-envelope flex-shrink-0" style="color: var(--accent);" aria-hidden="true"></i>
-                            <a href="mailto:info@loginco.com.mx" class="text-sm hover:text-white transition-colors">info@loginco.com.mx</a>
+                            <a href="https://www.loginco.com.mx/contacto/" class="text-sm hover:text-white transition-colors"><span class="contact-email" data-u="info" data-d="loginco.com.mx"></span></a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-clock flex-shrink-0" style="color: var(--accent);" aria-hidden="true"></i>
